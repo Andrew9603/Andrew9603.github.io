@@ -15,6 +15,7 @@ import{d as p,c as u,r as c,n as N,o as s,a as U,t as T,b,w as m,T as ce,e as h,
         .VPSidebar { z-index: 60 !important; }
         @media (max-width: 959px) {
           .VPLocalNav { top: var(--vp-nav-height) !important; z-index: 99 !important; background: rgba(245, 239, 230, 0.9) !important; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+          .VPSidebar { top: var(--vp-nav-height) !important; padding-top: 12px !important; }
         }
 
         /* 项目页面特殊样式 */
