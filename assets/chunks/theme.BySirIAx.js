@@ -11,11 +11,10 @@ import{d as p,c as u,r as c,n as N,o as s,a as U,t as T,b,w as m,T as ce,e as h,
         .VPContent, .VPContent.has-sidebar { padding-top: var(--vp-nav-height) !important; }
 
         /* 移动端侧边栏适配：VPNav 被设为 fixed 后需要调整相关组件 */
-        .VPBackdrop { z-index: 50 !important; }
-        .VPSidebar { z-index: 60 !important; }
         @media (max-width: 959px) {
-          .VPLocalNav { top: var(--vp-nav-height) !important; z-index: 99 !important; background: rgba(245, 239, 230, 0.9) !important; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
-          .VPSidebar { top: var(--vp-nav-height) !important; padding-top: 12px !important; }
+          .VPLocalNav { top: var(--vp-nav-height) !important; z-index: 10 !important; background: rgba(245, 239, 230, 0.9) !important; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+          .VPBackdrop { z-index: 20 !important; }
+          .VPSidebar { top: var(--vp-nav-height) !important; padding-top: 12px !important; z-index: 30 !important; }
         }
 
         /* 项目页面特殊样式 */
