@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+<defs>
+      <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#07111F"/>
+        <stop offset="55%" stop-color="#0B1F33"/>
+        <stop offset="100%" stop-color="#111827"/>
+      </linearGradient>
+      <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.35"/>
+      </filter>
+      <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+        <path d="M2,2 L10,6 L2,10 Z" fill="#8EC5FF"/>
+      </marker>
+      <style>
+        .title{font-family:Inter,'Microsoft YaHei',Arial,sans-serif;font-size:40px;font-weight:800;fill:#F8FAFC;}
+        .subtitle{font-family:Inter,'Microsoft YaHei',Arial,sans-serif;font-size:20px;fill:#B6C2D2;}
+        .label{font-family:Inter,'Microsoft YaHei',Arial,sans-serif;font-size:25px;font-weight:700;fill:#F8FAFC;}
+        .small{font-family:Inter,'Microsoft YaHei',Arial,sans-serif;font-size:17px;fill:#C7D2E1;}
+        .tiny{font-family:Inter,'Microsoft YaHei',Arial,sans-serif;font-size:14px;fill:#94A3B8;}
+        .num{font-family:Inter,'Microsoft YaHei',Arial,sans-serif;font-size:22px;font-weight:800;fill:#0B1220;}
+      </style>
+    </defs>
+<rect width="1200" height="675" rx="0" fill="url(#bg)"/>
+<circle cx="1000" cy="105" r="210" fill="#1D4ED8" opacity="0.10"/>
+<circle cx="185" cy="570" r="240" fill="#0EA5E9" opacity="0.08"/>
+<text x="60" y="76" class="title">图3  Schema Linking 与 RAG 检索流程</text>
+<text x="60" y="112" class="subtitle">大库场景不要把全库结构全部塞给模型，而是按需检索相关表、字段、样例和业务规则</text>
+<path d="M300 245 C 330 245, 330 245, 360 245" stroke="#8EC5FF" stroke-width="4" fill="none" marker-end="url(#arrow)" opacity="0.95"/>
+<path d="M590 245 C 620 245, 620 245, 650 245" stroke="#8EC5FF" stroke-width="4" fill="none" marker-end="url(#arrow)" opacity="0.95"/>
+<path d="M880 245 C 910 245, 910 245, 940 245" stroke="#8EC5FF" stroke-width="4" fill="none" marker-end="url(#arrow)" opacity="0.95"/>
+<path d="M765 320 C 765 320, 765 405, 765 405" stroke="#8EC5FF" stroke-width="4" fill="none" marker-end="url(#arrow)" opacity="0.95"/>
+<path d="M590 460 C 620 460, 620 460, 650 460" stroke="#8EC5FF" stroke-width="4" fill="none" marker-end="url(#arrow)" opacity="0.95"/>
+<path d="M475 320 C 475 320, 475 405, 475 405" stroke="#8EC5FF" stroke-width="4" fill="none" marker-end="url(#arrow)" opacity="0.95"/>
+<rect x="70" y="170" width="230" height="150" rx="24" fill="#193B2E" stroke="#6EE7B7" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="98" y="212" class="label">离线构建 KB</text>
+<text x="98" y="252" class="small">表结构说明</text>
+<text x="98" y="278" class="small">字段别名</text>
+<text x="98" y="304" class="small">指标口径</text>
+<text x="98" y="330" class="small">历史 NLQ-SQL</text>
+<rect x="360" y="170" width="230" height="150" rx="24" fill="#302654" stroke="#A78BFA" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="388" y="212" class="label">索引</text>
+<text x="388" y="252" class="small">BM25 关键词索引</text>
+<text x="388" y="278" class="small">Embedding 向量索引</text>
+<text x="388" y="304" class="small">元数据过滤</text>
+<rect x="650" y="170" width="230" height="150" rx="24" fill="#173B57" stroke="#3BA7FF" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="678" y="212" class="label">在线召回</text>
+<text x="678" y="252" class="small">用户问题</text>
+<text x="678" y="278" class="small">Top-k 表/列/样例</text>
+<text x="678" y="304" class="small">重排与去噪</text>
+<rect x="940" y="170" width="200" height="150" rx="24" fill="#4A2A13" stroke="#FF9F1C" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="968" y="212" class="label">Prompt</text>
+<text x="968" y="252" class="small">只放相关上下文</text>
+<text x="968" y="278" class="small">降低 token</text>
+<text x="968" y="304" class="small">减少干扰</text>
+<rect x="360" y="405" width="230" height="110" rx="24" fill="#123F4A" stroke="#39D7C8" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="388" y="447" class="label">Schema Linking</text>
+<text x="388" y="487" class="small">问题中的业务词 ↔ 表/字段/指标</text>
+<rect x="650" y="405" width="230" height="110" rx="24" fill="#1C2533" stroke="#6B7280" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="678" y="447" class="label">SQL Draft</text>
+<text x="678" y="487" class="small">生成 SQL 草稿</text>
+<text x="678" y="513" class="small">再做校验与修正</text>
+<text x="60" y="635" class="tiny">最新趋势：企业级 Text2SQL 更重视可扩展 schema retrieval，而不是单纯追求更长上下文。</text>
+</svg>

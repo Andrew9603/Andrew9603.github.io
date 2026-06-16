@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+<defs>
+      <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#07111F"/>
+        <stop offset="55%" stop-color="#0B1F33"/>
+        <stop offset="100%" stop-color="#111827"/>
+      </linearGradient>
+      <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.35"/>
+      </filter>
+      <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+        <path d="M2,2 L10,6 L2,10 Z" fill="#8EC5FF"/>
+      </marker>
+      <style>
+        .title{font-family:Inter,'Microsoft YaHei',Arial,sans-serif;font-size:40px;font-weight:800;fill:#F8FAFC;}
+        .subtitle{font-family:Inter,'Microsoft YaHei',Arial,sans-serif;font-size:20px;fill:#B6C2D2;}
+        .label{font-family:Inter,'Microsoft YaHei',Arial,sans-serif;font-size:25px;font-weight:700;fill:#F8FAFC;}
+        .small{font-family:Inter,'Microsoft YaHei',Arial,sans-serif;font-size:17px;fill:#C7D2E1;}
+        .tiny{font-family:Inter,'Microsoft YaHei',Arial,sans-serif;font-size:14px;fill:#94A3B8;}
+        .num{font-family:Inter,'Microsoft YaHei',Arial,sans-serif;font-size:22px;font-weight:800;fill:#0B1220;}
+      </style>
+    </defs>
+<rect width="1200" height="675" rx="0" fill="url(#bg)"/>
+<circle cx="1000" cy="105" r="210" fill="#1D4ED8" opacity="0.10"/>
+<circle cx="185" cy="570" r="240" fill="#0EA5E9" opacity="0.08"/>
+<text x="60" y="76" class="title">图5  Text2SQL 的持续演进闭环</text>
+<text x="60" y="112" class="subtitle">系统上线后不能只看单次生成效果，要把失败样本、低频问题和高频模式沉淀起来</text>
+<path d="M310 255 C 340 255, 340 255, 370 255" stroke="#8EC5FF" stroke-width="4" fill="none" marker-end="url(#arrow)" opacity="0.95"/>
+<path d="M600 255 C 630 255, 630 255, 660 255" stroke="#8EC5FF" stroke-width="4" fill="none" marker-end="url(#arrow)" opacity="0.95"/>
+<path d="M775 320 C 775 320, 775 390, 775 390" stroke="#8EC5FF" stroke-width="4" fill="none" marker-end="url(#arrow)" opacity="0.95"/>
+<path d="M660 455 C 630 455, 630 455, 600 455" stroke="#8EC5FF" stroke-width="4" fill="none" marker-end="url(#arrow)" opacity="0.95"/>
+<path d="M370 470 C 340 470, 340 270, 310 270" stroke="#8EC5FF" stroke-width="4" fill="none" marker-end="url(#arrow)" opacity="0.95"/>
+<rect x="80" y="190" width="230" height="130" rx="24" fill="#173B57" stroke="#3BA7FF" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="108" y="232" class="label">线上日志</text>
+<text x="108" y="272" class="small">问题 / SQL / 结果</text>
+<text x="108" y="298" class="small">耗时 / token</text>
+<text x="108" y="324" class="small">错误类型</text>
+<rect x="370" y="160" width="230" height="190" rx="24" fill="#302654" stroke="#A78BFA" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="398" y="202" class="label">评测与归因</text>
+<text x="398" y="242" class="small">可执行率</text>
+<text x="398" y="268" class="small">执行正确率</text>
+<text x="398" y="294" class="small">字段命中率</text>
+<text x="398" y="320" class="small">慢查询 / 越权</text>
+<rect x="660" y="190" width="230" height="130" rx="24" fill="#193B2E" stroke="#6EE7B7" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="688" y="232" class="label">知识库更新</text>
+<text x="688" y="272" class="small">补字段解释</text>
+<text x="688" y="298" class="small">补业务规则</text>
+<text x="688" y="324" class="small">补示例 SQL</text>
+<rect x="660" y="390" width="230" height="130" rx="24" fill="#4A2A13" stroke="#FF9F1C" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="688" y="432" class="label">工具沉淀</text>
+<text x="688" y="472" class="small">高频复杂问题</text>
+<text x="688" y="498" class="small">抽象为业务 API</text>
+<text x="688" y="524" class="small">加入参数校验</text>
+<rect x="370" y="420" width="230" height="100" rx="24" fill="#123F4A" stroke="#39D7C8" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="398" y="462" class="label">灰度发布</text>
+<text x="398" y="502" class="small">回归测试通过后发布</text>
+<text x="398" y="528" class="small">保留回滚策略</text>
+<text x="60" y="635" class="tiny">真正有用的 Text2SQL 系统，一般都是“模型能力 + 工程闭环 + 业务沉淀”一起迭代出来的。</text>
+</svg>

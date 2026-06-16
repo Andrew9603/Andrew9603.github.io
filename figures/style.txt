@@ -1,0 +1,1 @@
+Shared visual style: 1200x675, dark-navy background, blue/orange accent, rounded cards, consistent font sizes.

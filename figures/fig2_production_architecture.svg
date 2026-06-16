@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+<defs>
+      <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#07111F"/>
+        <stop offset="55%" stop-color="#0B1F33"/>
+        <stop offset="100%" stop-color="#111827"/>
+      </linearGradient>
+      <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.35"/>
+      </filter>
+      <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+        <path d="M2,2 L10,6 L2,10 Z" fill="#8EC5FF"/>
+      </marker>
+      <style>
+        .title{font-family:Inter,'Microsoft YaHei',Arial,sans-serif;font-size:40px;font-weight:800;fill:#F8FAFC;}
+        .subtitle{font-family:Inter,'Microsoft YaHei',Arial,sans-serif;font-size:20px;fill:#B6C2D2;}
+        .label{font-family:Inter,'Microsoft YaHei',Arial,sans-serif;font-size:25px;font-weight:700;fill:#F8FAFC;}
+        .small{font-family:Inter,'Microsoft YaHei',Arial,sans-serif;font-size:17px;fill:#C7D2E1;}
+        .tiny{font-family:Inter,'Microsoft YaHei',Arial,sans-serif;font-size:14px;fill:#94A3B8;}
+        .num{font-family:Inter,'Microsoft YaHei',Arial,sans-serif;font-size:22px;font-weight:800;fill:#0B1220;}
+      </style>
+    </defs>
+<rect width="1200" height="675" rx="0" fill="url(#bg)"/>
+<circle cx="1000" cy="105" r="210" fill="#1D4ED8" opacity="0.10"/>
+<circle cx="185" cy="570" r="240" fill="#0EA5E9" opacity="0.08"/>
+<text x="60" y="76" class="title">图2  生产级 Text2SQL 推荐架构</text>
+<text x="60" y="112" class="subtitle">把自然语言、知识检索、SQL 生成、权限校验、执行反馈拆开，不要让模型直接碰数据库</text>
+<path d="M290 225 C 325 225, 325 225, 360 225" stroke="#8EC5FF" stroke-width="4" fill="none" marker-end="url(#arrow)" opacity="0.95"/>
+<path d="M610 225 C 650 225, 650 225, 690 225" stroke="#8EC5FF" stroke-width="4" fill="none" marker-end="url(#arrow)" opacity="0.95"/>
+<path d="M940 225 C 965 225, 965 290, 990 290" stroke="#8EC5FF" stroke-width="4" fill="none" marker-end="url(#arrow)" opacity="0.95"/>
+<path d="M815 320 C 815 320, 815 395, 815 395" stroke="#8EC5FF" stroke-width="4" fill="none" marker-end="url(#arrow)" opacity="0.95"/>
+<path d="M690 460 C 650 460, 650 460, 610 460" stroke="#8EC5FF" stroke-width="4" fill="none" marker-end="url(#arrow)" opacity="0.95"/>
+<path d="M610 460 C 650 460, 650 270, 690 270" stroke="#8EC5FF" stroke-width="4" fill="none" marker-end="url(#arrow)" opacity="0.95"/>
+<path d="M990 355 C 965 355, 965 460, 940 460" stroke="#8EC5FF" stroke-width="4" fill="none" marker-end="url(#arrow)" opacity="0.95"/>
+<rect x="70" y="165" width="220" height="120" rx="24" fill="#123F4A" stroke="#39D7C8" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="98" y="207" class="label">用户问题</text>
+<text x="98" y="247" class="small">自然语言输入</text>
+<text x="98" y="273" class="small">多轮上下文</text>
+<rect x="360" y="140" width="250" height="170" rx="24" fill="#302654" stroke="#A78BFA" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="388" y="182" class="label">语义检索层</text>
+<text x="388" y="222" class="small">Schema / 指标口径</text>
+<text x="388" y="248" class="small">Join Path / 示例 SQL</text>
+<text x="388" y="274" class="small">业务文档 / API 说明</text>
+<rect x="690" y="130" width="250" height="190" rx="24" fill="#173B57" stroke="#3BA7FF" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="718" y="172" class="label">SQL 生成 Agent</text>
+<text x="718" y="212" class="small">问题拆解</text>
+<text x="718" y="238" class="small">候选 SQL 生成</text>
+<text x="718" y="264" class="small">执行计划自检</text>
+<rect x="690" y="395" width="250" height="130" rx="24" fill="#4A1D1D" stroke="#FB7185" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="718" y="437" class="label">Guardrail</text>
+<text x="718" y="477" class="small">只读白名单</text>
+<text x="718" y="503" class="small">权限 / 限流 / LIMIT</text>
+<text x="718" y="529" class="small">SQLGlot AST 校验</text>
+<rect x="990" y="220" width="150" height="210" rx="24" fill="#193B2E" stroke="#6EE7B7" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="1018" y="262" class="label">数据库</text>
+<text x="1018" y="302" class="small">执行 SQL</text>
+<text x="1018" y="328" class="small">返回结果</text>
+<text x="1018" y="354" class="small">慢查询拦截</text>
+<rect x="360" y="395" width="250" height="130" rx="24" fill="#4A2A13" stroke="#FF9F1C" stroke-width="2.5" filter="url(#shadow)"/>
+<text x="388" y="437" class="label">业务工具层</text>
+<text x="388" y="477" class="small">查课表 / 查学生</text>
+<text x="388" y="503" class="small">GMV / 留存率</text>
+<text x="388" y="529" class="small">复用已有 API</text>
+<text x="60" y="635" class="tiny">关键点：模型负责“推理与调度”，系统负责“权限、执行、安全和可观测”。</text>
+</svg>
